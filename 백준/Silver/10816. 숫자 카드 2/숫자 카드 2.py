@@ -1,18 +1,16 @@
 import sys
+from collections import Counter
+
 input = sys.stdin.readline
 
-from bisect import bisect_left, bisect_right
-
 def main():
-    _ = input()
-    nums1 = sorted(list(map(int, input().split())))
-    _ = input()
-    nums2 = list(map(int, input().split()))
+    input()  # N
+    cnt = Counter(map(int, input().split()))
+    input()  # M
+    queries = map(int, input().split())
 
-    for x in nums2:
-        right = bisect_right(nums1, x)
-        left = bisect_left(nums1, x)
-        print(abs(left - right), end=' ')
+    result = [str(cnt[q]) for q in queries]
+    sys.stdout.write(" ".join(result))
 
 if __name__ == "__main__":
     main()
