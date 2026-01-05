@@ -1,10 +1,9 @@
-# 이진탐색을 쓰는건가?
-# 일단 내 마음대로 풀어보자
-# 1. 정수 범위 리스트 만들기?: 너무 오래걸림
-# 2. 딕셔너리
-# 3. 이진탐색
 # left는 nums1의 수 보다 작은 게 nums2에 있으면 0으로 나옴 그것이 이진탐색이니까... 음
 # right는 nums1의 수 보다 큰 게 nums2에 있으면 len1으로 나옴 그것이 이진탐색이니까... 음
+
+# 이진탐색 left, right 2번 해서 풀었는데, 이진탐색 한 번만 써서 간소화해보자
+# set을 이용하여 풀어보자
+
 from bisect import bisect_left, bisect_right
 
 def main():
