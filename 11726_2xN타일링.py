@@ -59,7 +59,7 @@ def main():
                 mat_b = dp_matrix[idx_b] # n: 3일 때 2 크기의 타일 모든 경우의 수
                 print(mat_a)
                 print(mat_b)
-                tmp = mat_concat(mat_a, mat_b) # 이게 아니네
+                tmp = concatMatrix(mat_a, mat_b) # 이게 아니네
                                                # 경우의 수에서 또 하나씩만 뽑아야 함 개같은거
                 
                 isDuplicate = False
@@ -84,7 +84,7 @@ def main():
         print(m)
 
 
-def mat_concat(m1, m2): # 나중에 연산자 오버로딩으로 바꿔보기
+def concatMatrix(m1, m2): # 나중에 연산자 오버로딩으로 바꿔보기
     temp1 = m1[0] + m2[0]
     temp2 = m1[1] + m2[1]
     return [temp1, temp2]
